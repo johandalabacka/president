@@ -2,10 +2,27 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 import questions from '../questions.js'
 import deaths from '../deaths.js'
 
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
+
 export const useGameStore = defineStore('game', {
 
   state: () => ({
-    currentDate: new Date(),
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(),
+    countMonths: 0,
     state: 'start', // start, ruling, lost
     questions,
     deaths,
@@ -20,7 +37,8 @@ export const useGameStore = defineStore('game', {
   getters: {
     isDead: (state) => state.status === 'dead',
     isAlive: (state) => state.status !== 'dead',
-    date: (state) => state.currentDate.toDateString()
+    date: (state) => `${months[state.month]} ${state.year}`
+
   },
   actions: {
     init () {
@@ -31,24 +49,21 @@ export const useGameStore = defineStore('game', {
       this.nextYear()
     },
     nextYear () {
-      this.currentDate = new Date(this.currentDate.getTime() + 1000 * 60 * 60 * 24 * Math.floor(364 * Math.random() + 1))
+      if (this.month === 11) {
+        this.year++
+        this.month = 0
+      } else {
+        this.month++
+      }
       this.currentQuestion = Math.floor(Math.random() * this.questions.length)
     },
     answer (answer) {
       if (answer === 'yes') {
         const yes = this.questions[this.currentQuestion].yes
-
-        this.military += yes[0]
-        this.publicOpionion += yes[1]
-        this.world += yes[2]
-        this.industry += yes[3]
+        yes(this)
       } else {
         const no = this.questions[this.currentQuestion].no
-
-        this.military += no[0]
-        this.publicOpionion += no[1]
-        this.world += no[2]
-        this.industry += no[3]
+        no(this)
       }
 
       if (this.military <= 0) {
