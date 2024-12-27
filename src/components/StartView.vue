@@ -1,16 +1,16 @@
 <template>
   <div>
     <p>
-      Du är nyvald president i ett land som drabbats hårt av
-      inbördeskrig, svält och korruption. Du har lovat folket att
-      du ska förändra landet och göra det till ett bättre ställe
-      för alla. Men militären, kyrka, parlamentet och storföretagen
-      kan både stötta och motarbeta dig. Du måste fatta svåra beslut
-      och balansera mellan olika intressen för att lyckas. Om du inte lyckas
-      kan du bli avsatt, fängslad eller till och med dödad. Lycka till!
+      You are the newly elected president of a country that
+      has been hit hard by civil war, famine and corruption.
+      You have promised the people that you will change the country and make it a better
+      place for everyone. But the military, the people, the internationl community and the economic sector can both
+      support and oppose you. You must make difficult decisions and balance between
+      different interests to succeed. If you fail, you can be deposed, imprisoned or even killed.
+      Good luck!
     </p>
     <button type="button" @click="startGame">
-      Starta spelet
+      Start
     </button>
   </div>
 </template>

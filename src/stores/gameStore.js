@@ -11,8 +11,8 @@ export const useGameStore = defineStore('game', {
     deaths,
     currentQuestion: 0,
     military: 50,
-    church: 50,
-    parliment: 50,
+    publicOpionion: 50,
+    world: 50,
     industry: 50,
     lostReason: ''
   }),
@@ -25,14 +25,6 @@ export const useGameStore = defineStore('game', {
   actions: {
     init () {
       this.$reset()
-      /* this.years = 0
-      this.state = 'start'
-      this.currentQuestion = 0
-      this.military = 50
-      this.church = 50
-      this.parliment = 50
-      this.industry = 50
-      this.lostReason = '' */
     },
     start () {
       this.state = 'ruling'
@@ -47,47 +39,47 @@ export const useGameStore = defineStore('game', {
         const yes = this.questions[this.currentQuestion].yes
 
         this.military += yes[0]
-        this.church += yes[1]
-        this.parliment += yes[2]
+        this.publicOpionion += yes[1]
+        this.world += yes[2]
         this.industry += yes[3]
       } else {
         const no = this.questions[this.currentQuestion].no
 
         this.military += no[0]
-        this.church += no[1]
-        this.parliment += no[2]
+        this.publicOpionion += no[1]
+        this.world += no[2]
         this.industry += no[3]
       }
 
-      if (this.military < 0) {
+      if (this.military <= 0) {
         const min = this.deaths.military.min
         this.state = 'lost'
         this.lostReason = min[Math.floor(Math.random() * min.length)]
-      } else if (this.military > 100) {
+      } else if (this.military >= 100) {
         const max = this.deaths.military.max
         this.state = 'lost'
         this.lostReason = max[Math.floor(Math.random() * max.length)]
-      } else if (this.church < 0) {
-        const min = this.deaths.church.min
+      } else if (this.publicOpionion <= 0) {
+        const min = this.deaths.publicOpionion.min
         this.state = 'lost'
         this.lostReason = min[Math.floor(Math.random() * min.length)]
-      } else if (this.church > 100) {
-        const max = this.deaths.church.max
+      } else if (this.publicOpionion >= 100) {
+        const max = this.deaths.publicOpionion.max
         this.state = 'lost'
         this.lostReason = max[Math.floor(Math.random() * max.length)]
-      } else if (this.parliment < 0) {
-        const min = this.deaths.parliment.min
+      } else if (this.world <= 0) {
+        const min = this.deaths.world.min
         this.state = 'lost'
         this.lostReason = min[Math.floor(Math.random() * min.length)]
-      } else if (this.parliment > 100) {
-        const max = this.deaths.parliment.max
+      } else if (this.world >= 100) {
+        const max = this.deaths.world.max
         this.state = 'lost'
         this.lostReason = max[Math.floor(Math.random() * max.length)]
-      } else if (this.industry < 0) {
+      } else if (this.industry <= 0) {
         const min = this.deaths.industry.min
         this.state = 'lost'
         this.lostReason = min[Math.floor(Math.random() * min.length)]
-      } else if (this.industry > 100) {
+      } else if (this.industry >= 100) {
         const max = this.deaths.industry.max
         this.state = 'lost'
         this.lostReason = max[Math.floor(Math.random() * max.length)]

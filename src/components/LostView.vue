@@ -2,7 +2,7 @@
   <div>
     <p> {{ lostReason }}</p>
     <button @click="startGame">
-      Börja om
+      Restart
     </button>
   </div>
 </template>

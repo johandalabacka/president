@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div>M {{ game.military }} &dot; C {{ game.church }} &dot; P {{ game.parliment }} &dot; I {{ game.industry }} </div>
+    <div>M {{ game.military }} &dot; PO {{ game.publicOpionion }} &dot; W {{ game.world }} &dot; I {{ game.industry }} </div>
     <div class="date">
       {{ game.date }}
     </div>
     <p>{{ question }}</p>
     <div class="buttons">
       <button class="yes" type="button" @click="answerQuestion('yes')">
-        Ja
+        Yes
       </button>
       <button class="no" type="button" @click="answerQuestion('no')">
-        Nej
+        No
       </button>
     </div>
   </div>
