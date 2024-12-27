@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>M {{ game.military }} &dot; PO {{ game.publicOpionion }} &dot; W {{ game.world }} &dot; I {{ game.industry }} </div>
+    <StatusBar />
     <div class="date">
       {{ game.date }}
     </div>
@@ -17,9 +17,13 @@
 </template>
 
 <script>
+import StatusBar from './StatusBar.vue'
 import { useGameStore } from '../stores/gameStore.js'
 
 export default {
+  components: {
+    StatusBar
+  },
   computed: {
     game () {
       return useGameStore()
