@@ -69,11 +69,11 @@ export default [
     q: 'COUNTRY has requested a loan to build a new hydroelectric power plant. Should you grant the loan?',
 
     yes: (state) => {
-      state.industry += 20
+      state.industry -= 20
       state.world -= 25
     },
     no: (state) => {
-      state.industry -= 20
+      state.industry += 20
       state.world += 5
     }
   },
