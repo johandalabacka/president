@@ -1,30 +1,27 @@
 <template>
   <div class="status-bar">
-    <FontAwesomeIcon :icon="faPersonMilitaryRifle" />
-    {{ game.military }} &nbsp;
-    <FontAwesomeIcon :icon="faPerson" />
-    {{ game.publicOpionion }} &nbsp;
-    <FontAwesomeIcon :icon="faGlobe" />
-    {{ game.world }} &nbsp;
-    <FontAwesomeIcon :icon="faIndustry" />
-    {{ game.industry }}
+    <StatusIcon :icon="faPersonMilitaryRifle" :level="game.military" />
+    <StatusIcon :icon="faPerson" :level="game.publicOpionion" />
+    <StatusIcon :icon="faGlobe" :level="game.world" />
+    <StatusIcon :icon="faIndustry" :level="game.industry" />
   </div>
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   faPersonMilitaryRifle,
   faPerson,
   faGlobe,
-  faIndustry
+  faIndustry,
+  faSkull
 } from '@fortawesome/free-solid-svg-icons'
 
 import { useGameStore } from '../stores/gameStore.js'
+import StatusIcon from './StatusIcon.vue'
 
 export default {
   components: {
-    FontAwesomeIcon
+    StatusIcon
   },
   computed: {
     game () {
@@ -41,6 +38,9 @@ export default {
     },
     faIndustry () {
       return faIndustry
+    },
+    faSkull () {
+      return faSkull
     }
   }
 }
