@@ -1,9 +1,12 @@
 <template>
   <span class="status-icon">
-    <FontAwesomeIcon :class="levelClass" :icon="icon" />
+    <FontAwesomeIcon :icon="icon" />
     <template v-if="level <= 0 || level >= 100">
-      <FontAwesomeIcon :class="levelClass" :icon="faSkull" />
+      <FontAwesomeIcon :icon="faSkull" />
     </template>
+    <div v-else class="statusbar">
+      <div :style="{width: `${level}%`}" />
+    </div>
     {{ level }} <!-- only debugging maybe -->
   </span>
 </template>
@@ -30,38 +33,24 @@ export default {
   computed: {
     faSkull () {
       return faSkull
-    },
-    levelClass () {
-      if (this.level <= 20) {
-        return 'c0-20'
-      } else if (this.level <= 40) {
-        return 'c21-40'
-      } else if (this.level <= 60) {
-        return 'c41-60'
-      } else if (this.level >= 80) {
-        return 'c61-80'
-      } else {
-        return 'C81-100'
-      }
     }
   }
 }
 </script>
 
 <style scoped>
-  .c0-20 {
-    color: red;
+  .statusbar {
+    display: inline-block;
+    width: 1rem;
+    height: 0.5rem;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: transparent;
+    margin: 2px;
   }
-  .c21-40 {
-    color: orange;
-  }
-  .c41-60 {
-    color: yellow;
-  }
-  .c61-80 {
-    color: green;
-  }
-  .c81-100 {
-    color: blue;
+
+  .statusbar div {
+    height: 100%;
+    background-color: white;
   }
 </style>
