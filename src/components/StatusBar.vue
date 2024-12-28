@@ -48,14 +48,8 @@ export default {
 
 <style scoped>
 .status-bar {
-  position:fixed;
-  top:0;
-  left: 0;
   text-align: center;
   width:100%;
-  z-index:100;
   padding: 0.25em;
-  margin: 0;
-  background-color: var(--bg-color);
 }
 </style>

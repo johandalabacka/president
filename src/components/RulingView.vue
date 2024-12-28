@@ -3,7 +3,7 @@
     <div class="date">
       {{ game.date }}
     </div>
-    <div>{{ question }}</div>
+    <p>{{ question }}</p>
     <div class="buttons">
       <button class="yes" type="button" @click="answerQuestion('yes')">
         Yes
