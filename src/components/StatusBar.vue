@@ -50,9 +50,12 @@ export default {
 .status-bar {
   position:fixed;
   top:0;
+  left: 0;
   text-align: center;
   width:100%;
   z-index:100;
-  margin: 0.25em;
+  padding: 0.25em;
+  margin: 0;
+  background-color: var(--bg-color);
 }
 </style>
