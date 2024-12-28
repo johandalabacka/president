@@ -70,11 +70,11 @@ export default [
 
     yes: (state) => {
       state.industry -= 20
-      state.world -= 25
+      state.world += 25
     },
     no: (state) => {
-      state.industry += 20
-      state.world += 5
+      state.industry += 8
+      state.world -= 5
     }
   },
   {
@@ -92,7 +92,7 @@ export default [
     }
   },
   {
-    q: 'The transnational company COMPANY wants to build a new finance district in the capital where currently a slum is located. Should you allow the construction?',
+    q: 'The transnational company COMPANY wants to build a new finance complex in the capital where currently a slum is located. Should you allow the construction?',
 
     yes: (state) => {
       state.publicOpinion -= 25
@@ -107,13 +107,13 @@ export default [
     q: 'The chief of staff proposes a military parade to show the strength of the armed forces. Do you accept?',
 
     yes: (state) => {
-      state.military += 5
+      state.military += 20
       state.publicOpinion += 20
       state.world -= 12
       state.industry -= 10
     },
     no: (state) => {
-      state.military -= 5
+      state.military -= 11
       state.publicOpinion -= 10
     }
   },
@@ -159,7 +159,7 @@ export default [
     }
   },
   {
-    q: 'A comedian in COUNTRY has joked about you and your appearance. Should this have internal consequences?',
+    q: 'A comedian in COUNTRY has joked about you and your appearance. Should this have international consequences?',
 
     yes: (state) => {
       state.military += 2
@@ -183,6 +183,52 @@ export default [
     },
     no: (state) => {
       state.military -= 20
+    }
+  },
+  {
+    q: 'Your Minister of Tourism has proposed to convert a military airfield to a commercial airport. COMPANY has offered to finance it with the condition that they will own a substantial part. Do you accept?',
+
+    yes: (state) => {
+      state.military -= 22
+      state.publicOpinion += 15
+      state.world += 8
+      state.industry += 12
+    },
+    no: (state) => {
+      state.military += 7
+      state.publicOpinion -= 8
+      state.industry -= 10
+    }
+  },
+  {
+    q: 'A group of mercenaries contracted by industrial conglomerate COMPANY has attacked a village close to a power plant. Should the company be punished?',
+
+    yes: (state) => {
+      state.military += 5
+      state.publicOpinion += 20
+      state.world += 6
+      state.industry -= 25
+    },
+    no: (state) => {
+      state.publicOpinion -= 20
+      state.world += 8
+      state.industry += 12
+    }
+  },
+  {
+    q: 'The International Monetary Fund has offered to give you a very valuable loan of money. The only condition is that you cut defence spending. Do you comply?',
+
+    yes: (state) => {
+      state.military /= 2
+      state.publicOpinion += 5
+      state.world += 10
+      state.industry += 35
+    },
+    no: (state) => {
+      state.military += 10
+      state.publicOpinion -= 10
+      state.world -= 20
+      state.industry -= 8
     }
   }
 ]

@@ -29,7 +29,7 @@ export const useGameStore = defineStore('game', {
     deaths,
     currentQuestion: 0,
     military: 50,
-    publicOpionion: 50,
+    publicOpinion: 50,
     world: 50,
     industry: 50,
     lostReason: ''

@@ -16,7 +16,7 @@ export default {
       'Due to low public approval, the people demand your resignation. You are deposed and flee the country.'
     ],
     max: [
-      'With living standards increasing, the people demand more rights. You are deposed and executed as a tyrant..'
+      'With living standards increasing, the people demand more rights. You are deposed and executed as a tyrant.'
     ]
   },
   world: {
@@ -27,7 +27,8 @@ export default {
       'Several neigboring countries and great powers sanctions your country. The economy collapses and you are deposed and flee the country.'
     ],
     max: [
-      'The international community gets to much influence. By not putting your country first, your general staff stages a coup. You are deposed and flee the country.'
+      'The international community gets to much influence. By not putting your country first, your general staff stages a coup. You are deposed and flee the country.',
+      'With strong UN presence the factions promoting free elections grows strong. Outside of your control, the regional UN office overseers the transition to democracy. You are voted out of office and lives the rest of your life in exile.'
     ]
   },
   industry: {
@@ -38,7 +39,8 @@ export default {
     ],
     max: [
       'With the industry growing too powerful, the most powerful business leaders find you too weak. They stage a coup and take over power.',
-      'The economic sector is booming and the companies grow extremely rich and powerful. A conspiracy of the most powerful industrial oligarchs deposes you and takes over power.'
+      'The economic sector is booming and the companies grow extremely rich and powerful. A conspiracy of the most powerful industrial oligarchs deposes you and takes power.',
+      'With the economic sector booming too much and too fast, the inflation skyrockets and the economy is on the brink of collapse. The people demand your resignation and you are deposed and flee the country.'
     ]
   }
 }

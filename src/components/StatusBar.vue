@@ -1,7 +1,7 @@
 <template>
   <div class="status-bar">
     <StatusIcon :icon="faPersonMilitaryRifle" :level="game.military" />
-    <StatusIcon :icon="faPerson" :level="game.publicOpionion" />
+    <StatusIcon :icon="faPerson" :level="game.publicOpinion" />
     <StatusIcon :icon="faGlobe" :level="game.world" />
     <StatusIcon :icon="faIndustry" :level="game.industry" />
   </div>
