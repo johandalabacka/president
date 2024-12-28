@@ -22,6 +22,7 @@ export const useGameStore = defineStore('game', {
   state: () => ({
     year: new Date().getFullYear(),
     month: new Date().getMonth(),
+    monthsInPower: 0,
     countMonths: 0,
     state: 'start', // start, ruling, lost
     questions,
@@ -49,6 +50,7 @@ export const useGameStore = defineStore('game', {
       this.nextYear()
     },
     nextYear () {
+      this.monthsInPower++
       if (this.month === 11) {
         this.year++
         this.month = 0

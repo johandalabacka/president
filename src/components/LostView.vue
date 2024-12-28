@@ -4,7 +4,8 @@
     <div class="date">
       {{ game.date }}
     </div>
-    <p> {{ lostReason }}</p>
+    <p> {{ game.lostReason }}</p>
+    <p>You had {{ game.monthsInPower }} months in power.</p>
     <button @click="startGame">
       Restart
     </button>
@@ -22,12 +23,6 @@ export default {
   computed: {
     game () {
       return useGameStore()
-    },
-    lostReason () {
-      return this.game.lostReason
-    },
-    date () {
-      return this.game.date
     }
   },
   methods: {
