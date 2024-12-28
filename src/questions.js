@@ -46,7 +46,6 @@ export default [
       state.world += 16
     },
     no: (state) => {
-      state.military += 16
       state.publicOpinion -= 5
       state.world -= 16
     }
@@ -60,7 +59,6 @@ export default [
       state.world += 10
     },
     no: (state) => {
-      state.military += 20
       state.publicOpinion -= 5
       state.world -= 25
     }
@@ -216,7 +214,7 @@ export default [
     }
   },
   {
-    q: 'The International Monetary Fund has offered to give you a very valuable loan of money. The only condition is that you cut defence spending. Do you comply?',
+    q: 'The International Monetary Fund has offered to give you a very substantial loan of money. The only condition is that you cut defence spending. Do you comply?',
 
     yes: (state) => {
       state.military /= 2
@@ -229,6 +227,57 @@ export default [
       state.publicOpinion -= 10
       state.world -= 20
       state.industry -= 8
+    }
+  },
+  {
+    q: 'A conference is gonna be held in COUNTRY to dicuss development in the region. Your Minister of Foreign Affairs recommends us to join in. Should we?',
+
+    yes: (state) => {
+      state.publicOpinion += 5
+      state.world += 20
+      state.industry += 10
+    },
+    no: (state) => {
+      state.publicOpinion -= 5
+      state.world -= 20
+    }
+  },
+  {
+    q: 'COUNTRY has offered a trade agreement, limiting tariffs on manufactured goods. Do you accept?',
+
+    yes: (state) => {
+      state.world += 10
+      state.industry += 10
+    },
+    no: (state) => {
+      state.world -= 10
+      state.industry -= 10
+    }
+  },
+  {
+    q: 'A feared and violent terrorist group in the REGION region has offered to join your regular army. Do you accept?',
+
+    yes: (state) => {
+      state.military += 20
+      state.publicOpinion -= 15
+      state.world -= 5
+    },
+    no: (state) => {
+      state.publicOpinion += 3
+      state.world += 3
+    }
+  },
+  {
+    q: 'A feared and violent terrorist group in the REGION region has offered to join your regular army. Do you accept?',
+
+    yes: (state) => {
+      state.military += 20
+      state.publicOpinion -= 15
+      state.world -= 5
+    },
+    no: (state) => {
+      state.publicOpinion += 3
+      state.world += 3
     }
   }
 ]

@@ -10,3 +10,18 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 Öppna terminal 
 
 npm run dev
+
+
+## Idéer
+
+- Event som blir vanligare beroende på om vissa staplar är höga eller låga
+- Eventkedjor
+- Nyheter, både internationella och nationella ex. OS, politik i andra länder
+- Vid spelstart genereras landets namn, flagga, huvudstad, president, tre regioner, fem grannländer och typ fem ministrar.
+    ° Minister of Finance
+    ° Minister of Defence
+    ° Minister of Foregin Affairs
+    ° Minister of Health
+    ° Minister of Agriculture
+- Eventuellt generera flera karaktärer som under spelets gång kan ändras typ FN generalsekretare, IMF direktör, företags VD
+- Election day vart fjärde år med mechanics för att fuska

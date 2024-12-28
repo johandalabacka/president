@@ -10,7 +10,7 @@ export default {
       'With the military so influential, your national guard seizes control and deposes you. The military junta takes over.'
     ]
   },
-  publicOpionion: {
+  publicOpinion: {
     min: [
       'Low public opinion leads to a revolution. You are deposed and executed as a tyrant.',
       'Due to low public approval, the people demand your resignation. You are deposed and flee the country.'
@@ -40,7 +40,8 @@ export default {
     max: [
       'With the industry growing too powerful, the most powerful business leaders find you too weak. They stage a coup and take over power.',
       'The economic sector is booming and the companies grow extremely rich and powerful. A conspiracy of the most powerful industrial oligarchs deposes you and takes power.',
-      'With the economic sector booming too much and too fast, the inflation skyrockets and the economy is on the brink of collapse. The people demand your resignation and you are deposed and flee the country.'
+      'With the economic sector booming too much and too fast, the inflation skyrockets and the economy is on the brink of collapse. The people demand your resignation and you are deposed and flee the country.',
+      'With the national debts piling up no purchases or wages can be paid. Striking workers in the capital result in a full-blown revolt. You are deposed and imprisoned for treason against the people.'
     ]
   }
 }
