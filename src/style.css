@@ -2,6 +2,9 @@
   --bg-color: #282c34;
   --text-color: #fff;
 }
+/* div {
+  border: 1px solid red !important;
+} */
 
 html {
   font-size: 2rem;
@@ -10,18 +13,29 @@ html {
   background-color: var(--bg-color);
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
 
-.app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;        
+} 
+
+.content {
+  text-align: center;
+  width: 480px;
+  max-width: 480px;
+  text-align: center;
+  margin: 0 auto;
 }
   
 
 .view {
-   position: absolute;
+  box-sizing: border-box;
+  position: absolute;
+  width: 480px;
+  max-width: 480px;
+  padding: 3em 0.5em;
 }
 
 date {
@@ -30,6 +44,7 @@ date {
 }
 
 .buttons {
+  margin-top: 2em;
   display: flex;
   justify-content: space-around;
 }
@@ -58,5 +73,5 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto rgba(255, 255, 255);
 }

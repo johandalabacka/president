@@ -1,5 +1,6 @@
 <template>
-  <div class="app">
+  <StatusBar />
+  <div class="content">
     <Transition name="fade" mode="out-in">
       <StartView v-if="state === 'start'" class="view" />
       <RulingView v-else-if="state === 'ruling'" :key="key" class="view" />
@@ -13,12 +14,14 @@ import { useGameStore } from './stores/gameStore.js'
 import StartView from './components/StartView.vue'
 import RulingView from './components/RulingView.vue'
 import LostView from './components/LostView.vue'
+import StatusBar from './components/StatusBar.vue'
 
 export default {
   components: {
     StartView,
     RulingView,
-    LostView
+    LostView,
+    StatusBar
   },
   computed: {
     state () {

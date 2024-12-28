@@ -1,10 +1,9 @@
 <template>
   <div>
-    <StatusBar />
     <div class="date">
       {{ game.date }}
     </div>
-    <p>{{ question }}</p>
+    <div>{{ question }}</div>
     <div class="buttons">
       <button class="yes" type="button" @click="answerQuestion('yes')">
         Yes
@@ -17,13 +16,9 @@
 </template>
 
 <script>
-import StatusBar from './StatusBar.vue'
 import { useGameStore } from '../stores/gameStore.js'
 
 export default {
-  components: {
-    StatusBar
-  },
   computed: {
     game () {
       return useGameStore()

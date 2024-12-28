@@ -1,6 +1,5 @@
 <template>
   <div>
-    <StatusBar />
     <div class="date">
       {{ game.date }}
     </div>
@@ -14,12 +13,8 @@
 
 <script>
 import { useGameStore } from '../stores/gameStore.js'
-import StatusBar from './StatusBar.vue'
 
 export default {
-  components: {
-    StatusBar
-  },
   computed: {
     game () {
       return useGameStore()
