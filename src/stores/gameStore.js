@@ -45,7 +45,7 @@ export const useGameStore = defineStore('game', {
       // At least 3 capital letters eventually followed by a number
       return question.replace(/([A-Z]{3,})(\d*)/g, (_, key, index) => {
         const namesForKey = names[key.toLowerCase()]
-        if (!namesForKey) {
+        if (!namesForKey || namesForKey.length === 0) {
           return key
         }
         console.log(key, namesForKey)
