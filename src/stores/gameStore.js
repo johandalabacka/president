@@ -1,6 +1,7 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import questions from '../questions.js'
 import deaths from '../deaths.js'
+import names from '../names.js'
 
 const months = [
   'January',
@@ -38,8 +39,24 @@ export const useGameStore = defineStore('game', {
   getters: {
     isDead: (state) => state.status === 'dead',
     isAlive: (state) => state.status !== 'dead',
-    date: (state) => `${months[state.month]} ${state.year}`
-
+    date: (state) => `${months[state.month]} ${state.year}`,
+    question (state) {
+      const question = state.questions[state.currentQuestion].q
+      // At least 3 capital letters eventually followed by a number
+      return question.replace(/([A-Z]{3,})(\d*)/g, (_, key, index) => {
+        const namesForKey = names[key.toLowerCase()]
+        if (!namesForKey) {
+          return key
+        }
+        console.log(key, namesForKey)
+        if (index === '') {
+          return namesForKey[Math.floor(Math.random() * namesForKey.length)]
+        } else {
+          const i = parseInt(index)
+          return namesForKey[i]
+        }
+      })
+    }
   },
   actions: {
     init () {

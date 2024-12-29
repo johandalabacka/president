@@ -24,7 +24,7 @@ export default {
       return useGameStore()
     },
     question () {
-      return this.game.questions[this.game.currentQuestion].q
+      return this.game.question
     }
   },
   methods: {
