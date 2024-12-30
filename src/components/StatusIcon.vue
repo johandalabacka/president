@@ -11,31 +11,20 @@
   </span>
 </template>
 
-<script>
+<script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faSkull } from '@fortawesome/free-solid-svg-icons'
 
-export default {
-  name: 'StatusIcon',
-  components: {
-    FontAwesomeIcon
+defineProps({
+  icon: {
+    type: Object,
+    required: true
   },
-  props: {
-    icon: {
-      type: Object,
-      required: true
-    },
-    level: {
-      type: Number,
-      required: true
-    }
-  },
-  computed: {
-    faSkull () {
-      return faSkull
-    }
+  level: {
+    type: Number,
+    required: true
   }
-}
+})
 </script>
 
 <style scoped>

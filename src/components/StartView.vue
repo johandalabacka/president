@@ -15,14 +15,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useGameStore } from '../stores/gameStore.js'
 
-export default {
-  methods: {
-    startGame () {
-      useGameStore().start()
-    }
-  }
+function startGame () {
+  useGameStore().start()
 }
 </script>

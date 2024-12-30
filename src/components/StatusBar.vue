@@ -7,43 +7,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import {
   faPersonMilitaryRifle,
   faPerson,
   faGlobe,
-  faIndustry,
-  faSkull
+  faIndustry
 } from '@fortawesome/free-solid-svg-icons'
 
 import { useGameStore } from '../stores/gameStore.js'
 import StatusIcon from './StatusIcon.vue'
 
-export default {
-  components: {
-    StatusIcon
-  },
-  computed: {
-    game () {
-      return useGameStore()
-    },
-    faPersonMilitaryRifle () {
-      return faPersonMilitaryRifle
-    },
-    faPerson () {
-      return faPerson
-    },
-    faGlobe () {
-      return faGlobe
-    },
-    faIndustry () {
-      return faIndustry
-    },
-    faSkull () {
-      return faSkull
-    }
-  }
-}
+const game = useGameStore()
 </script>
 
 <style scoped>

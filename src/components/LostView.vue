@@ -11,19 +11,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useGameStore } from '../stores/gameStore.js'
+const game = useGameStore()
 
-export default {
-  computed: {
-    game () {
-      return useGameStore()
-    }
-  },
-  methods: {
-    startGame () {
-      useGameStore().init()
-    }
-  }
+function startGame () {
+  game.init()
 }
 </script>

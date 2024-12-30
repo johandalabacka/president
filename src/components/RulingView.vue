@@ -15,25 +15,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useGameStore } from '../stores/gameStore.js'
 
-export default {
-  computed: {
-    game () {
-      return useGameStore()
-    },
-    question () {
-      return this.game.question
-    }
-  },
-  methods: {
-    answerQuestion (answer) {
-      this.game.answer(answer)
-      if (this.game.isAlive) {
-        this.game.nextYear()
-      }
-    }
+const game = useGameStore()
+const question = game.question
+
+function answerQuestion (answer) {
+  game.answer(answer)
+  if (game.isAlive) {
+    game.nextYear()
   }
 }
 </script>
