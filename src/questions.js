@@ -230,7 +230,7 @@ export default [
     }
   },
   {
-    q: 'A conference is gonna be held in COUNTRY to dicuss development in the region. Your Minister of Foreign Affairs recommends us to join in. Should we?',
+    q: 'A conference is gonna be held in COUNTRY´s capital to dicuss development in the region. Your Minister of Foreign Affairs recommends us to join in. Should we?',
 
     yes: (state) => {
       state.publicOpinion += 5
@@ -243,7 +243,7 @@ export default [
     }
   },
   {
-    q: 'COUNTRY has offered a trade agreement, limiting tariffs on manufactured goods. Do you accept?',
+    q: 'The Republic of COUNTRY has offered a trade agreement, limiting tariffs on manufactured goods. Do you accept?',
 
     yes: (state) => {
       state.world += 10
