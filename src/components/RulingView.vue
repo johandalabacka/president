@@ -3,7 +3,7 @@
     <div class="date">
       {{ game.date }}
     </div>
-    <p>{{ question }}</p>
+    <p v-html="question" />
     <div class="buttons">
       <button class="yes" type="button" @click="answerQuestion('yes')">
         Yes

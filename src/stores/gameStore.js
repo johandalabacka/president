@@ -28,6 +28,16 @@ function pickByPropability (array, key) {
   return [array.at(-1), index]
 }
 
+function randomArray (array) {
+  const a = [...array]
+  const newArray = []
+  while (a.length > 0) {
+    const i = Math.floor(Math.random() * a.length)
+    newArray.push(a.splice(i, 1)[0])
+  }
+  return newArray
+}
+
 const months = [
   'January',
   'February',
@@ -60,7 +70,8 @@ export const useGameStore = defineStore('game', {
     publicOpinion: 50,
     world: 50,
     industry: 50,
-    lostReason: ''
+    lostReason: '',
+    names: {}
   }),
 
   getters: {
@@ -71,15 +82,17 @@ export const useGameStore = defineStore('game', {
       const question = state.currentQuestion.q
       // At least 3 capital letters eventually followed by a number
       return question.replace(/([A-Z]{3,})(\d*)/g, (_, key, index) => {
-        const namesForKey = names[key.toLowerCase()]
+        const keyLower = key.toLowerCase()
+        const namesForKey = this.names[keyLower]
         if (!namesForKey || namesForKey.length === 0) {
-          return key
+          return `<span class="${keyLower}">${key}</span>`
         }
         if (index === '') {
-          return namesForKey[Math.floor(Math.random() * namesForKey.length)]
+          const name = namesForKey[Math.floor(Math.random() * namesForKey.length)]
+          return `<span class="${keyLower}">${name}</span>`
         } else {
           const i = parseInt(index)
-          return namesForKey[i]
+          return `<span class="${keyLower}">${namesForKey[i - 1]}</span>`
         }
       })
     }
@@ -90,6 +103,7 @@ export const useGameStore = defineStore('game', {
     },
     start () {
       this.state = 'ruling'
+      this.randomizeNames()
       this.nextYear()
     },
     nextYear () {
@@ -151,6 +165,11 @@ export const useGameStore = defineStore('game', {
       const taggedQuestions = questions.filter(q => q.tag === tag)
       for (const question of taggedQuestions) {
         this.questions.push(question)
+      }
+    },
+    randomizeNames () {
+      for (const key in names) {
+        this.names[key] = randomArray(names[key])
       }
     }
   }

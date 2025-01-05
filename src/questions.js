@@ -1,13 +1,12 @@
 export default [
   {
     q: 'A milita group attacks a prison in the capital. Should we use all means necessary to find the insurgents?',
-    propability: 1000.0,
+    propability: 1.0,
     yes: (state) => {
       state.military += 15
       state.publicOpinion -= 5
       state.world -= 5
       state.industry -= 5
-      state.addByTag('penguingate')
     },
     no: (state) => {
       state.military -= 20
@@ -16,8 +15,20 @@ export default [
     }
   },
   {
+    q: 'The Minister of Education COMPANY1 wants to introduce a new curriculum that includes more focus on the history of the country. Should we approve the new curriculum?',
+    propability: 10000.0,
+    yes: (state) => {
+      state.publicOpinion += 10
+      state.world += 5
+      state.addByTag('penguingate')
+    },
+    no: (state) => {
+      state.publicOpinion -= 5
+    }
+  },
+  {
     tag: 'penguingate',
-    q: 'En pingvin har rymt från en lokal djurpark och har setts vandra runt i staden. Ska vi fånga in pingvinen?',
+    q: 'En pingvin har rymt från en lokal djurpark och har setts vandra runt i staden. Ministern COMPANY1 vill fånga in pingvinen. Ska de få göra det?',
     propability: 1000.0,
     yes: (state) => { },
     no: (state) => { }
