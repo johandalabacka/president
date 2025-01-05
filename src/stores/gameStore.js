@@ -3,6 +3,31 @@ import questions from '../questions.js'
 import deaths from '../deaths.js'
 import names from '../names.js'
 
+function sumByKey (array, key) {
+  return array.reduce((acc, item) => acc + item[key], 0)
+}
+/**
+ *
+ * @param {{[key]: number}} array
+ * @param {string} key
+ * @param {*} totalPropability
+ * @returns
+ */
+function pickByPropability (array, key) {
+  const sumPropability = sumByKey(array, 'propability')
+  const r = Math.random() * sumPropability
+  let acc = 0
+  let index = 0
+  for (const item of array) {
+    acc += item[key]
+    if (r < acc) {
+      return [item, index]
+    }
+    index++
+  }
+  return [array.at(-1), index]
+}
+
 const months = [
   'January',
   'February',
@@ -26,7 +51,9 @@ export const useGameStore = defineStore('game', {
     monthsInPower: 0,
     countMonths: 0,
     state: 'start', // start, ruling, lost
-    questions,
+    // A copy of the questions array so we can modify it
+    questions: [...questions.filter(q => !q.tag)],
+    totalPropability: 0,
     deaths,
     currentQuestion: 0,
     military: 50,
@@ -41,14 +68,13 @@ export const useGameStore = defineStore('game', {
     isAlive: (state) => state.status !== 'dead',
     date: (state) => `${months[state.month]} ${state.year}`,
     question (state) {
-      const question = state.questions[state.currentQuestion].q
+      const question = state.currentQuestion.q
       // At least 3 capital letters eventually followed by a number
       return question.replace(/([A-Z]{3,})(\d*)/g, (_, key, index) => {
         const namesForKey = names[key.toLowerCase()]
         if (!namesForKey || namesForKey.length === 0) {
           return key
         }
-        console.log(key, namesForKey)
         if (index === '') {
           return namesForKey[Math.floor(Math.random() * namesForKey.length)]
         } else {
@@ -74,14 +100,16 @@ export const useGameStore = defineStore('game', {
       } else {
         this.month++
       }
-      this.currentQuestion = Math.floor(Math.random() * this.questions.length)
+      const [question, index] = pickByPropability(this.questions, 'propability')
+      this.questions.splice(index, 1)
+      this.currentQuestion = question
     },
     answer (answer) {
       if (answer === 'yes') {
-        const yes = this.questions[this.currentQuestion].yes
+        const yes = this.currentQuestion.yes
         yes(this)
       } else {
-        const no = this.questions[this.currentQuestion].no
+        const no = this.currentQuestion.no
         no(this)
       }
 
@@ -117,6 +145,12 @@ export const useGameStore = defineStore('game', {
         const max = this.deaths.industry.max
         this.state = 'lost'
         this.lostReason = max[Math.floor(Math.random() * max.length)]
+      }
+    },
+    addByTag (tag) {
+      const taggedQuestions = questions.filter(q => q.tag === tag)
+      for (const question of taggedQuestions) {
+        this.questions.push(question)
       }
     }
   }

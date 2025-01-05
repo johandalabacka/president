@@ -1,12 +1,13 @@
 export default [
   {
     q: 'A milita group attacks a prison in the capital. Should we use all means necessary to find the insurgents?',
-
+    propability: 1000.0,
     yes: (state) => {
       state.military += 15
       state.publicOpinion -= 5
       state.world -= 5
       state.industry -= 5
+      state.addByTag('penguingate')
     },
     no: (state) => {
       state.military -= 20
@@ -15,8 +16,15 @@ export default [
     }
   },
   {
+    tag: 'penguingate',
+    q: 'En pingvin har rymt från en lokal djurpark och har setts vandra runt i staden. Ska vi fånga in pingvinen?',
+    propability: 1000.0,
+    yes: (state) => { },
+    no: (state) => { }
+  },
+  {
     q: 'Your Minister of Defence requests funding to build a national airforce?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 12
       state.publicOpinion += 5
@@ -28,7 +36,7 @@ export default [
   },
   {
     q: 'The industrial conglomerate COMPANYMIN has found a potential vein of cobolt located underneath a lush rainforest with a vibrant wildlife. Should you let them dig?',
-
+    propability: 1.0,
     yes: (state) => {
       state.publicOpinion -= 10
       state.industry += 25
@@ -39,7 +47,7 @@ export default [
   },
   {
     q: 'UN wants you to sign the Convention to ban landmines. Should you sign?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military -= 16
       state.publicOpinion += 5
@@ -52,7 +60,7 @@ export default [
   },
   {
     q: 'Human rights organizations wants you to take further actions to end the the employment of child soldiers. Should you comply?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military -= 20
       state.publicOpinion += 5
@@ -65,7 +73,7 @@ export default [
   },
   {
     q: 'COUNTRY has requested a loan to build a new hydroelectric power plant. Should you grant the loan?',
-
+    propability: 1.0,
     yes: (state) => {
       state.industry -= 20
       state.world += 25
@@ -77,7 +85,7 @@ export default [
   },
   {
     q: 'To prevent the spread of a deadly virus the Minister of Health wants the governemnt to finance vaccine programs. Do you accept?',
-
+    propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 16
       state.world += 6
@@ -91,7 +99,7 @@ export default [
   },
   {
     q: 'The transnational company COMPANY wants to build a new finance complex in the capital where currently a slum is located. Should you allow the construction?',
-
+    propability: 1.0,
     yes: (state) => {
       state.publicOpinion -= 25
       state.industry += 20
@@ -103,7 +111,7 @@ export default [
   },
   {
     q: 'The chief of staff proposes a military parade to show the strength of the armed forces. Do you accept?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 20
       state.publicOpinion += 20
@@ -117,7 +125,7 @@ export default [
   },
   {
     q: 'The food company COMPANYFOO have been revealed to trick customers with false advertising. Should you fine the company?',
-
+    propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 12
       state.world += 6
@@ -130,7 +138,7 @@ export default [
   },
   {
     q: 'An earthquake has hit the country and the Minister of Infrastructure requests funding to rebuild the infrastructure. Should you grant the funding?',
-
+    propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 12
       state.world += 6
@@ -144,7 +152,7 @@ export default [
   },
   {
     q: 'Protests have erupted in the capital due to the high unemployment rate. Should you send in the military to quell the protests?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 10
       state.publicOpinion -= 15
@@ -158,7 +166,7 @@ export default [
   },
   {
     q: 'A comedian in COUNTRY has joked about you and your appearance. Should this have international consequences?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 2
       state.publicOpinion += 6
@@ -172,7 +180,7 @@ export default [
   },
   {
     q: 'Our intelligence services have found evidence of a coup plot. Should you arrest the conspirators?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 15
       state.publicOpinion -= 8
@@ -185,7 +193,7 @@ export default [
   },
   {
     q: 'Your Minister of Tourism has proposed to convert a military airfield to a commercial airport. COMPANY has offered to finance it with the condition that they will own a substantial part. Do you accept?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military -= 22
       state.publicOpinion += 15
@@ -200,7 +208,7 @@ export default [
   },
   {
     q: 'A group of mercenaries contracted by industrial conglomerate COMPANY has attacked a village close to a power plant. Should the company be punished?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 5
       state.publicOpinion += 20
@@ -215,7 +223,7 @@ export default [
   },
   {
     q: 'The International Monetary Fund has offered to give you a very substantial loan of money. The only condition is that you cut defence spending. Do you comply?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military /= 2
       state.publicOpinion += 5
@@ -231,7 +239,7 @@ export default [
   },
   {
     q: 'A conference is gonna be held in COUNTRY´s capital to dicuss development in the region. Your Minister of Foreign Affairs recommends us to join in. Should we?',
-
+    propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 5
       state.world += 20
@@ -244,7 +252,7 @@ export default [
   },
   {
     q: 'The Republic of COUNTRY has offered a trade agreement, limiting tariffs on manufactured goods. Do you accept?',
-
+    propability: 1.0,
     yes: (state) => {
       state.world += 10
       state.industry += 10
@@ -256,7 +264,7 @@ export default [
   },
   {
     q: 'A feared and violent terrorist group in the REGION region has offered to join your regular army. Do you accept?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 20
       state.publicOpinion -= 15
@@ -269,7 +277,7 @@ export default [
   },
   {
     q: 'A feared and violent terrorist group in the REGION region has offered to join your regular army. Do you accept?',
-
+    propability: 1.0,
     yes: (state) => {
       state.military += 20
       state.publicOpinion -= 15
