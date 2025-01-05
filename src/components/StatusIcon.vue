@@ -7,7 +7,7 @@
     <div v-else class="statusbar">
       <div :style="{width: `${level}%`}" />
     </div>
-    {{ level }} <!-- only debugging maybe -->
+    <template v-if="debugging">{{ level }}</template>
   </span>
 </template>
 
@@ -25,13 +25,16 @@ defineProps({
     required: true
   }
 })
+
+const debugging = import.meta.env.VITE_DEBUG === 'yes'
+
 </script>
 
 <style scoped>
   .statusbar {
     display: inline-block;
-    width: 1rem;
-    height: 0.5rem;
+    width: 2rem;
+    height: 0.4rem;
     border: 1px solid white;
     border-radius: 2px;
     background-color: transparent;
