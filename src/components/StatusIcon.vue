@@ -33,7 +33,7 @@ const debugging = import.meta.env.VITE_DEBUG === 'yes'
 <style scoped>
   .statusbar {
     display: inline-block;
-    width: 2rem;
+    width: 1.5rem;
     height: 0.4rem;
     border: 1px solid white;
     border-radius: 2px;
