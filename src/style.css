@@ -77,6 +77,34 @@ button:focus-visible {
 }
 
 .company {
-  color: lightblue;
+  color: lightseagreen;
+  font-weight: bold;
+}
+.companymin {
+  color: lightseagreen;
+  font-weight: bold;
+}
+.companywea {
+  color: lightseagreen;
+  font-weight: bold;
+}
+  .companyfoo {
+  color: lightseagreen;
+  font-weight: bold;
+}
+.region {
+  color: greenyellow;
+  font-weight: bold;
+}
+.first {
+  color: orange;
+  font-weight: bold;
+}
+.sur {
+  color: orange;
+  font-weight: bold;
+}
+.country {
+  color: yellow;
   font-weight: bold;
 }

@@ -1,3 +1,14 @@
+// Minister of Finance = FIRST1 SUR1
+// Minister of Defence = FIRST2 SUR2
+// Minister of Health = FIRST3 SUR3
+// Minister of Infrastructure = FIRST4 SUR4
+// Minister of Tourism = FIRST5 SUR5
+// Minister of Foreign Affairs = FIRST6 SUR6
+// Chief of Staff = FIRST7 SURT7
+// Minister of Agriculture = FIRST8 SUR8
+// Minister of Education = FIRST9 SUR9
+// Minister of Energy = FIRST10 SUR10
+// Threatining neighbour = COUNTRY5
 export default [
   {
     q: 'A milita group attacks a prison in the capital. Should we use all means necessary to find the insurgents?',
@@ -15,27 +26,35 @@ export default [
     }
   },
   {
-    q: 'The Minister of Education COMPANY1 wants to introduce a new curriculum that includes more focus on the history of the country. Should we approve the new curriculum?',
-    propability: 10000.0,
+    q: 'The international mining company COMPANYMIN2 wants to construct a pipeline from their mining site in the REGION2 region to the coast. Several villages have to be moved. Do you accept?',
+    propability: 1.0,
     yes: (state) => {
-      state.publicOpinion += 10
-      state.world += 5
-      state.addByTag('penguingate')
+      state.publicOpinion -= 18
+      state.world -= 3
+      state.industry += 20
     },
     no: (state) => {
-      state.publicOpinion -= 5
+      state.publicOpinion += 5
+      state.industry -= 10
+      state.addByTag('nopipeline')
     }
   },
   {
-    tag: 'penguingate',
-    q: 'En pingvin har rymt från en lokal djurpark och har setts vandra runt i staden. Ministern COMPANY1 vill fånga in pingvinen. Ska de få göra det?',
-    propability: 1000.0,
-    yes: (state) => { },
-    no: (state) => { }
+    tag: 'nopipeline',
+    q: 'COMPANYMIN2 has decided to shut down all operations in the REGION2 region. Your Minister of Finance, FIRST1 SUR1 has recommended to sign more generous contracts to get them back. Should we?',
+    propability: 8.0,
+    yes: (state) => {
+      state.publicOpinion -= 5
+      state.industry -= 10
+    },
+    no: (state) => {
+      state.publicOpinion += 5
+      state.industry -= 15
+    }
   },
   {
-    q: 'Your Minister of Defence requests funding to build a national airforce?',
-    propability: 1.0,
+    q: 'Your Minister of Defence, FIRST2 SUR2 requests funding to build a national airforce?',
+    propability: 1000.0,
     yes: (state) => {
       state.military += 12
       state.publicOpinion += 5
@@ -95,7 +114,7 @@ export default [
     }
   },
   {
-    q: 'To prevent the spread of a deadly virus the Minister of Health wants the governemnt to finance vaccine programs. Do you accept?',
+    q: 'To prevent the spread of a deadly virus the Minister of Health, FIRST3 SUR3 wants the governemnt to finance vaccine programs. Do you accept?',
     propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 16
@@ -121,7 +140,7 @@ export default [
     }
   },
   {
-    q: 'The chief of staff proposes a military parade to show the strength of the armed forces. Do you accept?',
+    q: 'The Minister of Defence, FIRST2 SUR2 proposes a military parade to show the strength of the armed forces. Do you accept?',
     propability: 1.0,
     yes: (state) => {
       state.military += 20
@@ -148,7 +167,7 @@ export default [
     }
   },
   {
-    q: 'An earthquake has hit the country and the Minister of Infrastructure requests funding to rebuild the infrastructure. Should you grant the funding?',
+    q: 'An earthquake has hit the country and the Minister of Infrastructure, FIRST4 SUR4 requests funding to rebuild the infrastructure. Should you grant the funding?',
     propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 12
@@ -203,7 +222,7 @@ export default [
     }
   },
   {
-    q: 'Your Minister of Tourism has proposed to convert a military airfield to a commercial airport. COMPANY has offered to finance it with the condition that they will own a substantial part. Do you accept?',
+    q: 'Your Minister of Tourism, FIRST5 SUR5 has proposed to convert a military airfield to a commercial airport. COMPANY has offered to finance it with the condition that they will own a substantial part. Do you accept?',
     propability: 1.0,
     yes: (state) => {
       state.military -= 22
@@ -249,7 +268,7 @@ export default [
     }
   },
   {
-    q: 'A conference is gonna be held in COUNTRY´s capital to dicuss development in the region. Your Minister of Foreign Affairs recommends us to join in. Should we?',
+    q: 'A conference is gonna be held in COUNTRY´s capital to dicuss development in the region. Your Minister of Foreign Affairs, FIRST6 SUR6 recommends us to join in. Should we?',
     propability: 1.0,
     yes: (state) => {
       state.publicOpinion += 5
@@ -287,16 +306,31 @@ export default [
     }
   },
   {
-    q: 'A feared and violent terrorist group in the REGION region has offered to join your regular army. Do you accept?',
+    q: 'Drought has struck the REGION2 region. Your Minister of Agriculture, FIRST8 SUR8 has demanded to help local farmers out. Should we?',
+    propability: 1.0,
+    yes: (state) => {
+      state.publicOpinion += 15
+      state.world += 7
+      state.industry -= 23
+    },
+    no: (state) => {
+      state.publicOpinion -= 20
+      state.world += 3
+      state.industry += 5
+    }
+  },
+  {
+    q: 'Your Chief of Staff, FIRST7 SUR7 requsts funding to build up defence on the border to COUNTRY5. Do you accept?',
     propability: 1.0,
     yes: (state) => {
       state.military += 20
-      state.publicOpinion -= 15
-      state.world -= 5
+      state.world -= 10
+      state.industry -= 10
     },
     no: (state) => {
-      state.publicOpinion += 3
-      state.world += 3
+      state.military -= 9
+      state.world += 5
+      state.industry += 5
     }
   }
 ]

@@ -2,7 +2,7 @@ export default {
   military: {
     min: [
       'Due to the lack of military funding, the guerilla grows too strong and storms the presidential palace. You are imprisoned and executed as a traitor.',
-      'COUNTRY invades and conquers your country. You are deposed and flee the country.',
+      'COUNTRY5 invades and conquers your country. You are deposed and flee the country.',
       'Due to not being able to pay soldier wages, enraged officers stage a coup. You are deposed and excuted.'
     ],
     max: [
