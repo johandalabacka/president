@@ -35,13 +35,13 @@ export default {
     min: [
       'The industry goes bankrupt and the country falls into an economic crisis. You are deposed and flee the country',
       'All industry is bought up by the neighboring country and you are deposed and flee the country.',
-      'With the national debts too high your central bank is forced to devaluate the currency. The economy collapses and you are deposed and flee the country.'
+      'With the national debts too high your central bank is forced to devaluate the currency. The economy collapses and you are deposed and flee the country.',
+      'With the national debts piling up no purchases or wages can be paid. Striking workers in the capital result in a full-blown revolt. You are deposed and imprisoned for treason against the people.'
     ],
     max: [
       'With the industry growing too powerful, the most powerful business leaders find you too weak. They stage a coup and take over power.',
       'The economic sector is booming and the companies grow extremely rich and powerful. A conspiracy of the most powerful industrial oligarchs deposes you and takes power.',
-      'With the economic sector booming too much and too fast, the inflation skyrockets and the economy is on the brink of collapse. The people demand your resignation and you are deposed and flee the country.',
-      'With the national debts piling up no purchases or wages can be paid. Striking workers in the capital result in a full-blown revolt. You are deposed and imprisoned for treason against the people.'
+      'With the economic sector booming too much and too fast, the inflation skyrockets and the economy is on the brink of collapse. The people demand your resignation and you are deposed and flee the country.'
     ]
   }
 }

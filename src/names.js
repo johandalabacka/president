@@ -1,9 +1,9 @@
 export default {
   first: [
-    'Michael', 'Sarah', 'John', 'Mary', 'David', 'Grace', 'James', 'Esther', 'Daniel', 'Ruth', 'Joseph', 'Rebecca', 'Hannah', 'Emmanuel', 'Deborah', 'Peter', 'Naomi', 'Moses', 'Samuel', 'Paul', 'Elizabeth', 'Benjamin', 'Joshua', 'Victoria', 'Isaac', 'Rory', 'Rachel', 'Matthew', 'Andrew', 'Stephen', 'Martha', 'Philip', 'Ruth', 'Lydia', 'Simon', 'Thomas', 'Judith', 'Angela', 'Timothy', 'Catherine', 'Jonathan', 'Anna', 'Mark', 'Eve', 'Patrick', 'Miriam', 'Luke', 'Daniel', 'Sophia', 'Chloe', 'Noah', 'Elias', 'Jordan', 'Gabriel', 'Victoria', 'Mark', 'Evelyn', 'Nathan', 'Christina', 'Aaron', 'Irene', 'Jacob', 'Lucy', 'Martin', 'Diana', 'Joel', 'Helena', 'Adam', 'Susanna', 'Henry', 'Fiona', 'Anthony', 'Lillian', 'Christopher', 'Theresa', 'Nicholas', 'Tendo', 'Vincent', 'Joanna', 'Alexander', 'Rosaline', 'Caroline', 'Juliet', 'Edwin', 'Priscilla', 'Cedric', 'Brenda', 'Ezekiel', 'Veronica', 'Jeremiah', 'Anastasia', 'Patrick', 'Florence', 'Caleb', 'Clara', 'Leonard', 'Mabel', 'Ethan', 'Augustin', 'Desmond', 'Imelda', 'Sebastian', 'Angela', 'Elijah', 'Annette', 'Justin', 'Martha', 'Fredrick', 'Beatrice', 'Victor', 'Estelle', 'Eric', 'Ivy', 'Stephen', 'Olive', 'Philip', 'Felix', 'Allan', 'Brandon', 'Patrick', 'Barbara', 'Kenneth', 'Henry', 'Clifford', 'Oliver', 'Oscar', 'Roselyn', 'Brian', 'Margaret', 'Francis', 'Daisy', 'Edgar', 'Gloria', 'Ronald', 'Cecilia', 'Trevor', 'Janet', 'Stanley', 'Rita', 'Ivan', 'Patricia', 'Nigel', 'Stella', 'Treasure', 'Goodluck', 'Precious', 'Patience', 'Comfort', 'Peace', 'Gift', 'Hope', 'Mercy', 'Faith', 'Blessing', 'Victory', 'Joy', 'Happiness', 'Charity', 'Kindness', 'Justice', 'Prosper', 'Divine', 'Miracle', 'Promise', 'Angel', 'Glory', 'Marvel', 'Destiny', 'Star', 'Zion'
+    'Michael', 'Sarah', 'John', 'Mary', 'David', 'Grace', 'James', 'Esther', 'Daniel', 'Ruth', 'Joseph', 'Rebecca', 'Hannah', 'Emmanuel', 'Deborah', 'Peter', 'Naomi', 'Moses', 'Samuel', 'Paul', 'Elizabeth', 'Benjamin', 'Joshua', 'Victoria', 'Isaac', 'Rory', 'Rachel', 'Matthew', 'Andrew', 'Stephen', 'Martha', 'Philip', 'Ruth', 'Lydia', 'Simon', 'Thomas', 'Judith', 'Angela', 'Timothy', 'Catherine', 'Jonathan', 'Anna', 'Mark', 'Eve', 'Patrick', 'Miriam', 'Luke', 'Daniel', 'Sophia', 'Chloe', 'Noah', 'Elias', 'Jordan', 'Gabriel', 'Victoria', 'Mark', 'Evelyn', 'Nathan', 'Christina', 'Aaron', 'Irene', 'Jacob', 'Lucy', 'Martin', 'Joseph', 'Diana', 'Joel', 'Helena', 'Stuart', 'Adam', 'Susanna', 'Henry', 'Fiona', 'Anthony', 'Lillian', 'Christopher', 'Theresa', 'Nicholas', 'Tendo', 'Vincent', 'Joanna', 'Alexander', 'Rosaline', 'Caroline', 'Juliet', 'Edwin', 'Priscilla', 'Cedric', 'Brenda', 'Ezekiel', 'Veronica', 'Jeremiah', 'Anastasia', 'Patrick', 'Florence', 'Caleb', 'Clara', 'Leonard', 'Mabel', 'Ethan', 'Augustin', 'Desmond', 'Imelda', 'Sebastian', 'Angela', 'Elijah', 'Baltazar', 'Annette', 'Justin', 'Martha', 'Fredrick', 'Beatrice', 'Victor', 'Estelle', 'Eric', 'Ivy', 'Stephen', 'Winston', 'Philip', 'Felix', 'Allan', 'Brandon', 'Patrick', 'Barbara', 'Kenneth', 'Henry', 'Clifford', 'Oliver', 'Oscar', 'Roselyn', 'Brian', 'Margaret', 'Francis', 'Daisy', 'Edgar', 'Gloria', 'Ronald', 'Cecilia', 'Trevor', 'Janet', 'Stanley', 'Rita', 'Ivan', 'Patricia', 'Nigel', 'Stella', 'Treasure', 'Goodluck', 'Precious', 'Patience', 'Comfort', 'Peace', 'Gift', 'Hope', 'Mercy', 'Faith', 'Blessing', 'Victory', 'Joy', 'Happiness', 'Charity', 'Kindness', 'Justice', 'Prosper', 'Divine', 'Miracle', 'Promise', 'Angel', 'Glory', 'Marvel', 'Destiny', 'Star', 'Zion'
   ],
   sur: [
-    'Okonkwo', 'Adeyemi', 'Mensah', 'Toure', 'Wanjiru', 'Habte', 'Njoroge', 'Abebe', 'Dlamini', 'Moyo', 'Masuku', 'Tlou', 'Mbongo', 'Ngalula', 'Zombo', 'Samba', 'Eze', 'Obasi', 'Amadi', 'Nwachukwu', 'Oluwole', 'Ademola', 'Folarin', 'Nkosi', 'Zulu', 'Chilufya', 'Mwangi', 'Omari', 'Kagiso', 'Makori', 'Nyongo', 'Adebayo', 'Kamau', 'Ochieng', 'Chikere', 'Baloyi', 'Mulenga', 'Ngoma', 'Kelechi', 'Nyathi', 'Lukwesa', 'Onyango', 'Ndlovu', 'Banda', 'Chioma', 'Ekong', 'Kanyangi', 'Ifeanyi', 'Makena', 'Chisom', 'Ngugi', 'Adichie', 'Bako', 'Mahoro', 'Njenga', 'Oketch', 'Mutua', 'Obiora', 'Sithole', 'Amara', 'Ndidi', 'Olorunfemi', 'Simba', 'Onyeka', 'Anyanwu', 'Chukwuma', 'Ibrahim', 'Olaosebikan', 'Chigozie', 'Ogundele', 'Ekwueme', 'Osei', 'Nkatha', 'Wamukota', 'Chibuzo', 'Luwalira', 'Odongo', 'Amankwa', 'Yeboah', 'Ajayi', 'Egbujo', 'Makokha', 'Njoroge', 'Mbatha', 'Dube', 'Mwenda', 'Obong', 'Tadesse', 'Wakio', 'Mabunda', 'Ngondo', 'Kakembo', 'Asante', 'Mugisha', 'Ayodele', 'Omotosho', 'Chiwenga', 'Onyekachi', 'Oluwatobi', 'Achieng', 'Bukenya', 'Kambale', 'Musoke', 'Muthoni', 'Nzinga', 'Bakari', 'Otieno', 'Fumilayo', 'Uzoamaka', 'Ofili', 'Ochieng', 'Ogugua', 'Adekunle', 'Ekwu', 'Njoku', 'Nkechi', 'Okeke', 'Okafor'
+    'Okonkwo', 'Adeyemi', 'Mensah', 'Toure', 'Wanjiru', 'Habte', 'Njoroge', 'Abebe', 'Dlamini', 'Moyo', 'Masuku', 'Tlou', 'Mbongo', 'Ngalula', 'Zombo', 'Samba', 'Eze', 'Obasi', 'Amadi', 'Nwachukwu', 'Oluwole', 'Ademola', 'Folarin', 'Nkosi', 'Zulu', 'Chilufya', 'Mwangi', 'Omari', 'Kagiso', 'Makori', 'Nyongo', 'Adebayo', 'Kamau', 'Ochieng', 'Chikere', 'Baloyi', 'Mulenga', 'Ngoma', 'Kelechi', 'Nyathi', 'Lukwesa', 'Onyango', 'Ndlovu', 'Banda', 'Chioma', 'Ekong', 'Kanyangi', 'Ifeanyi', 'Makena', 'Chisom', 'Ngugi', 'Adichie', 'Bako', 'Mahoro', 'Njenga', 'Oketch', 'Mutua', 'Obiora', 'Sithole', 'Amara', 'Ndidi', 'Olorunfemi', 'Simba', 'Onyeka', 'Anyanwu', 'Chukwuma', 'Ibrahim', 'Olaosebikan', 'Chigozie', 'Ogundele', 'Ekwueme', 'Osei', 'Nkatha', 'Wamukota', 'Chibuzo', 'Luwalira', 'Odongo', 'Amankwa', 'Yeboah', 'Ajayi', 'Egbujo', 'Makokha', 'Njoroge', 'Mbatha', 'Dube', 'Mwenda', 'Obong', 'Tadesse', 'Wakio', 'Mabunda', 'Ngondo', 'Kakembo', 'Asante', 'Mugisha', 'Ayodele', 'Omotosho', 'Chiwenga', 'Onyekachi', 'Oluwatobi', 'Achieng', 'Bukenya', 'Kambale', 'Musoke', 'Muthoni', 'Nzinga', 'Bakari', 'Otieno', 'Fumilayo', 'Uzoamaka', 'Ofili', 'Ochieng', 'Ogugua', 'Adekunle', 'Ekwu', 'Njoku', 'Nkechi', 'Okeke', 'Okafor', 'Sukya'
   ],
   company: [
     'Valeria Electromotive',
@@ -13,11 +13,21 @@ export default {
     'Hikari Motors',
     'Informataria',
     'Lyonix',
-    'Infra Electronics'
+    'Infra Electronics',
+    'Sakura Heavy Industries',
+    'Neptunia',
+    'Globus',
+    'ORCA',
+    'Intertechnica',
+    'Modertech',
+    'Everest Technicals',
+    'Blauman Industries',
+    'Lumaia Inc.'
   ],
   companywea: [
     'Rosenthal Point',
-    'Viking Arms'
+    'Viking Arms',
+    'Royal Weapon Systems'
   ],
   companyfoo: [
     'Daiyama',
@@ -32,7 +42,15 @@ export default {
     'Energo Group',
     'Friese Energy',
     'Daiyama Dynamics',
-    'Forma Gasworks'
+    'Forma Gasworks',
+    'Brixon Steel',
+    'Neptunia',
+    'Globus',
+    'Northland Oil',
+    'Intersteel Group'
+  ],
+  culture: ['Muka', 'Zani', 'Koba', 'Nyeko', 'Tsho', 'Bako', 'Imba', 'Fuso', 'Damu', 'Loka', 'Samba', 'Nthu', 'Ogo', 'Aka', 'Mbu', 'Kelo', 'Chiwa', 'Nyo', 'Tandu', 'Komi', 'Jimo', 'Ozo', 'Ngo', 'Bamu', 'Yano', 'Uka', 'Lom', 'Sewa', 'Ogo', 'Khum', 'Tso', 'Lura', 'Matsi', 'Zika', 'Poma', 'Duwa', 'Soma', 'Ikwa', 'Obu', 'Wotha', 'Kema', 'Choka', 'Bahi', 'Nfura', 'Gato', 'Kopa', 'Nthika', 'Lema', 'Otsh', 'Nyem', 'Jand', 'Khufa', 'Mula', 'Iso', 'Bokw', 'Tafu', 'Nje', 'Uka', 'Bash', 'Ogw', 'Mbut', 'Zom', 'Kiwo', 'Tumwa', 'Jiba', 'Tukwa', 'Ngo', 'Amuk', 'Lobw', 'Obam', 'Somu', 'Kamb', 'Ndol', 'Kanj', 'Tibo', 'Woma', 'Akur', 'Lifa', 'Buzo', 'Mata', 'Chiw', 'Ogun', 'Kwan', 'Sefa', 'Loku', 'Fijo', 'Dunw', 'Tsam', 'Yibo', 'Omwa', 'Joko', 'Nfum', 'Kato', 'Tumo', 'Bokw', 'Zam', 'Ikom', 'Chur', 'Pafu'
+
   ],
   country: [
     'Marundu',
@@ -78,7 +96,7 @@ export default {
     'Codomo',
     'Adash',
     'Lizongo',
-    'Hawoono'
+    'Hawoono', 'Matobo'
   ],
   region: [
     'Marundu',
@@ -125,5 +143,18 @@ export default {
     'Adash',
     'Lizongo',
     'Hawoono'
+  ],
+  city: [
+
+    'Mabala', 'Songo', 'Kimbe', 'Luma', 'Nari', 'Tenga', 'Demba', 'Safa',
+    'Boko', 'Zira', 'Koma', 'Misa', 'Toba', 'Rundi', 'Nako', 'Leni', 'Sira',
+    'Buma', 'Talo', 'Waga', 'Nyandara', 'Dandebwe', 'Kumakuri', 'Lomfalo', 'Ragai',
+    'Bahariwa', 'Simtala', 'Wenugora', 'Kimbassa', 'Dalekuto', 'Morazumi',
+    'Tarakunda', 'Sorobala', 'Vanduzi', 'Kafimba', 'Jubendari', 'Nasimbo', 'Uhibon', 'Goida',
+    'COUNTRY City', 'Obon', 'Lisango', 'Tiwano', 'Fort Charles', 'Port William',
+    'Queenstown', 'Thomasburg', 'Fort Benjamin', 'Port Harrison', 'Elmsworth',
+    'Frederickton', 'Duncansburg', 'Port Leonard', 'Fort Gregory', 'Petersville',
+    'Waldenport', 'Jamesford', 'Port Simon', 'Graysonville', 'Fort Maxwell', 'Himoun', 'Ruigui',
+    'Clarkston', 'Port Richard', 'Soukori', 'Yadu', 'Nyagal', 'Wanami', 'Gwana', 'Yaniy'
   ]
 }
